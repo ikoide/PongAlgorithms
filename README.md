@@ -2,3 +2,7 @@
 #### By Ian Koide
 
 ## Bot #1 Explained
+```
+paddle.y += paddle.velocity
+```
+Bot number 1 is the simplest of the bots, its constantly moving down.
