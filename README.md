@@ -140,7 +140,7 @@ else:
     paddle.y -= paddle.velocity
 ```
 This if statement works the same way as bot #2, the target variable is set when finding where to move the paddle and then the movement is executed. The reason why I don't just move the paddle to the projected cordinate is because that would be breaking game rules as max velocity is 17 for all bots.
-## Handling
+## Game Handling
 ### Walls
 ```
 if ball.y < (0 + ball.height):
