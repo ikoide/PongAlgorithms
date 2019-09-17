@@ -88,7 +88,7 @@ or
 ```
 if ball.y < 360:
 ```
-Then you use the formula screen width - ball y position to find where the ball will end up. After that you have to subtract the paddle height divided by 2 because the x position of the paddle is in the top corner not the middle. Then add the velocity of the paddle. See velocity Bug 0.0.
+Then you use the formula screen width - ball y position to find where the ball will end up. After that you have to subtract the paddle height divided by 2 because the x position of the paddle is in the top corner not the middle. Then add the velocity of the paddle. See [Velocity Bug 0.0](#bugs).
 ```
 (1080 - ball.y) - (paddle.height / 2) + 17
 ```
