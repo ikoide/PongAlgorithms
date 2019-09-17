@@ -12,7 +12,7 @@
 
 [Bugs](#bugs)
 
-[Acknowledgements](#acknowledgements)
+[Acknowledgments](#acknowledgments)
 
 ### Rules & Info
 #### Screen
