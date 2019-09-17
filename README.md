@@ -80,8 +80,21 @@ and
 ```
 else:
 ```
-If tha ball y position is greater than 360 than it is either a double bounce down or a single bounce up.
+If tha ball y position is greater than 360 than it is either going to make a double bounce down or a single bounce up.
 ```
 if ball.y > 360:
 ```
+or
+```
+if ball.y < 360:
+```
+This means that
 Then you use the formula screen width - ball y position to find where the ball will end up. After that you have to subtract the paddle height divided by 2 because the x position of the paddle is in the top corner not the middle. Then add the velocity of the paddle. See Bugs.
+
+##Bugs
+####Velocity Bug **0.0**
+The velocity bug is due to the fact that the ball skips every 17 pixels so this breaks a lot of my game mechanics. For example:
+- Wall mechanics
+- Paddle mechanics
+- Ball mechanics
+This pretty much effects every mechanic. The usual temporary fix is to just make a range of at least 17 when trying to sense collision etc. The permanent fix would be to add a new variable, something like speed. This would allow me to change this variable and multiply it times velocity to get certain effects while keeping a constant 17.
