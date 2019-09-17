@@ -39,7 +39,7 @@ global target
 
 if ball.x > 1060 and ball.x < 1080:
     # Up
-    if ball.yvelocity / 17 == 1: # If the ball is moving up
+    if ball.yvelocity / 17 == 1:
         if ball.y > 360:
             target = (1080 - ball.y) - (paddle.height / 2) + 17
             print(paddle.y , "Single Up")
@@ -49,7 +49,7 @@ if ball.x > 1060 and ball.x < 1080:
             print(paddle.y , "Double Up")
 
     # Down      
-    else: # If the ball is moving down
+    else:
         if ball.y < 360:
             target = (360 - ball.y) + (paddle.height / 2) - 17 # Wrong
             print(paddle.y , "Single Down")
@@ -76,11 +76,11 @@ The next if statement inside the first is checking if the balls velocity is posi
 ```
 if ball.yvelocity / 17 == 1:
 ```
-and
+this means its positive, and
 ```
 else:
 ```
-If the ball y position is greater than 360 than it is either going to make a double bounce down or a single bounce up because 
+means its negative. If the ball y position is greater than 360 than it is either going to make a double bounce down or a single bounce up. If its less than 360 than it will make a double bounce up or a single bouce down.
 ```
 if ball.y > 360:
 ```
@@ -88,8 +88,10 @@ or
 ```
 if ball.y < 360:
 ```
-
-Then you use the formula screen width - ball y position to find where the ball will end up. After that you have to subtract the paddle height divided by 2 because the x position of the paddle is in the top corner not the middle. Then add the velocity of the paddle. See Bugs.
+Then you use the formula screen width - ball y position to find where the ball will end up. After that you have to subtract the paddle height divided by 2 because the x position of the paddle is in the top corner not the middle. Then add the velocity of the paddle. See velocity Bug 0.0.
+```
+(1080 - ball.y) - (paddle.height / 2) + 17
+```
 
 ## Bugs
 #### Velocity Bug **0.0**
