@@ -72,4 +72,16 @@ Bot #4 calculates where the ball will end up on the side of the screen with the 
 ```
 if ball.x > 1060 and ball.x < 1080: 
 ```
-The next if statement inside the first is checking if the balls velocity is positive or negative. If it is positive and the starting ball y position is greater than 360 then it has to be a single bounce moving up. Then you use the formula screen width - ball y position to find where the ball will end up. After that you have to subtract the paddle height divided by 2 because the x position of the paddle is in the top corner not the middle. Then add the velocity of the paddle. See Bugs.
+The next if statement inside the first is checking if the balls velocity is positive or negative.
+```
+if ball.yvelocity / 17 == 1:
+```
+and
+```
+else:
+```
+If tha ball y position is greater than 360 than it is either a double bounce down or a single bounce up.
+```
+if ball.y > 360:
+```
+Then you use the formula screen width - ball y position to find where the ball will end up. After that you have to subtract the paddle height divided by 2 because the x position of the paddle is in the top corner not the middle. Then add the velocity of the paddle. See Bugs.
