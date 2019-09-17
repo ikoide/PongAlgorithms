@@ -3,9 +3,11 @@
 
 ## Table of Contents
 [Rules and Info](#rules-and-info)
+
 [Code Analysis](#code-analysis)
 - [Bots](#bots)
 - [Handling](#handling)
+
 [Bugs](#bugs)
 
 ### Rules and Info:
