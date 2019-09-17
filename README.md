@@ -99,7 +99,7 @@ The velocity bug is due to the fact that the ball skips every 17 pixels so this 
 
 This pretty much effects every mechanic. The usual temporary fix is to just make a range of at least 17 when trying to sense collision etc. The permanent fix would be to add a new variable, something like speed. This would allow me to change this variable and multiply it times velocity to get certain effects while keeping a constant 17.
 
-- ### Wall Velocity Bug, **0.1**
+- ##### Wall Velocity Bug, **0.1**
 
 When the ball hits the top or bottom wall it can hit anywhere from 0 or 720 to -17 or 729 due to the velocity being 17. Because of my walls mechanics if the ball y position is less than 0 or greater than 720 it reverses the velocity. 17 needs to be added or subtracted for it to not get caught on the wall and glitch out. But because sometimes it only bounces once for example a single bounce up the ball will be slightly off the predicted path. That is why on a single bouce 17 must be added or subtracted from the paddle y position to center it back out.
 
