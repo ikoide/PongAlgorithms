@@ -14,6 +14,7 @@
 - Width: 16
 - Velocity: 17
 
+# Code Analysis
 ## Bots
 ### Bot #1 Explained
 ```
