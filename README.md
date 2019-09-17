@@ -88,13 +88,13 @@ or
 ```
 if ball.y < 360:
 ```
-Then you use the formula screen width - ball y position to find where the ball will end up. After that you have to subtract the paddle height divided by 2 because the x position of the paddle is in the top corner not the middle. Then add the velocity of the paddle. See [Wall Velocity Bug 0.0](#velocity-bug-00).
+Then you use the formula screen width - ball y position to find where the ball will end up. After that you have to subtract the paddle height divided by 2 because the x position of the paddle is in the top corner not the middle. Then add the velocity of the paddle. See [Wall Velocity Bug 0.1](#velocity-bug-01).
 ```
 (1080 - ball.y) - (paddle.height / 2) + 17
 ```
 
 ## Bugs
-#### Velocity Bug **0.0**
+#### Velocity Bug, **0.0**
 The velocity bug is due to the fact that the ball skips every 17 pixels so this breaks a lot of my game mechanics. For example:
 
 This pretty much effects every mechanic. The usual temporary fix is to just make a range of at least 17 when trying to sense collision etc. The permanent fix would be to add a new variable, something like speed. This would allow me to change this variable and multiply it times velocity to get certain effects while keeping a constant 17.
