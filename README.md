@@ -67,6 +67,7 @@ elif target < paddle.y:
 else: 
     pass
 ```
+#### Calculation and Trajectories
 Bot #4 calculates where the ball will end up on the side of the screen with the paddle. The first if statement is to check if the ball is in the calculation range.
 ```
 if ball.x > 1060 and ball.x < 1080: 
@@ -104,6 +105,16 @@ Double down formula:
 ```
 (ball.y - 360)  - (paddle.height / 2)
 ```
+#### Moving Paddle
+```
+if target > paddle.y:
+    paddle.y += paddle.velocity
+
+else target < paddle.y:
+    paddle.y -= paddle.velocity
+
+```
+This if statement works the same way as bot #2, the target variable is set when finding where to move the paddle and then the movement is executed. The reason why I don't just move the paddle to the projected cordinate is because that would be breaking game rules as max velocity is 17 for all bots.
 ## Bugs
 #### Velocity Bug, **0.0**
 The velocity bug is due to the fact that the ball skips every 17 pixels so this breaks a lot of my game mechanics. For example:
