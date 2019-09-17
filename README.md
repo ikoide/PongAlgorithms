@@ -11,6 +11,7 @@
 - [Handling](#handling)
 
 [Bugs](#bugs)
+
 [Acknowledgements](#acknowledgements)
 
 ### Rules and Info
