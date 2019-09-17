@@ -100,12 +100,10 @@ Single down formula:
 Double up formula:
 ```
 (360 + ball.y)  - (paddle.height / 2)
-
 ```
 Double down formula:
 ```
 (ball.y - 360)  - (paddle.height / 2)
-
 ```
 ## Bugs
 #### Velocity Bug, **0.0**
