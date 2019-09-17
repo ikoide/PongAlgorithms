@@ -4,7 +4,7 @@
 ![Pong](img/README_image.png)
 
 ## Table of Contents
-[Rules and Info](#rules-and-info)
+[Info](#rules-and-info)
 
 [Code Analysis](#code-analysis)
 - [Bots](#bots)
@@ -14,7 +14,7 @@
 
 [Acknowledgements](#acknowledgements)
 
-### Rules and Info
+### Rules & Info
 #### Screen
 - Height: 720
 - Width: 1080
