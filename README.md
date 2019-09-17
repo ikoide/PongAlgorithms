@@ -1,6 +1,13 @@
 # The effect of bot type on score in the game pong
 #### By Ian Koide
 
+## Table of Contents
+[Rules and Info](#rules-and-info)
+[Code Analysis](#code-analysis)
+- [Bots](#bots)
+- [Handling](#handling)
+[Bugs](#bugs)
+
 ### Rules and Info:
 #### Screen
 - Height: 720
