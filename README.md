@@ -91,8 +91,8 @@ if ball.y < 360:
 This means that
 Then you use the formula screen width - ball y position to find where the ball will end up. After that you have to subtract the paddle height divided by 2 because the x position of the paddle is in the top corner not the middle. Then add the velocity of the paddle. See Bugs.
 
-##Bugs
-####Velocity Bug **0.0**
+## Bugs
+#### Velocity Bug **0.0**
 The velocity bug is due to the fact that the ball skips every 17 pixels so this breaks a lot of my game mechanics. For example:
 - Wall mechanics
 - Paddle mechanics
