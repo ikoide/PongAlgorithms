@@ -118,19 +118,20 @@ if ball.y < 360:
 ```
 Then you use the formula screen width - ball y position to find where the ball will end up. After that you have to subtract the paddle height divided by 2 because the x position of the paddle is in the top corner not the middle. Then add the velocity of the paddle. See [Wall Velocity Bug 0.1](##wall-velocity-bug-01).
 
-##### Single up formula
+#### Formulas
+##### Single bounce up
 ```
 (1080 - ball.y) - (paddle.height / 2) + 17
 ```
-##### Single down formula:
+##### Single bounce down
 ```
 (360 - ball.y) + (paddle.height / 2) - 17
 ```
-##### Double up formula:
+##### Double bounce up
 ```
 (360 + ball.y)  - (paddle.height / 2)
 ```
-##### Double down formula:
+##### Double bounce down
 ```
 (ball.y - 360)  - (paddle.height / 2)
 ```
