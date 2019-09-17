@@ -80,7 +80,7 @@ and
 ```
 else:
 ```
-If tha ball y position is greater than 360 than it is either going to make a double bounce down or a single bounce up.
+If the ball y position is greater than 360 than it is either going to make a double bounce down or a single bounce up because 
 ```
 if ball.y > 360:
 ```
@@ -88,7 +88,7 @@ or
 ```
 if ball.y < 360:
 ```
-This means that
+
 Then you use the formula screen width - ball y position to find where the ball will end up. After that you have to subtract the paddle height divided by 2 because the x position of the paddle is in the top corner not the middle. Then add the velocity of the paddle. See Bugs.
 
 ## Bugs
