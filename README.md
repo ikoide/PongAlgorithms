@@ -66,7 +66,6 @@ elif target < paddle.y:
 
 else: 
     pass
-
 ```
 Bot #4 calculates where the ball will end up on the side of the screen with the paddle. The first if statement is to check if the ball is in the calculation range.
 ```
@@ -81,7 +80,7 @@ this means its positive, and
 else:
 ```
 means its negative. If the ball y position is greater than 360 than it is either going to make a double bounce down or a single bounce up. If its less than 360 than it will make a double bounce up or a single bouce down.
-```
+``` Seles, back in those days, WAS JUST NOT AFRAID. OF NO ONE ! 
 if ball.y > 360:
 ```
 or
