@@ -232,5 +232,5 @@ When the ball hits the top or bottom wall it can hit anywhere from 0 or 720 to -
 In pygame 0 is at the top left of the screen. For example 1080, 720 would be at the bottom right of the screen, not top left. This interferes with some operations and confused me a lot during the process of making the game. It's not a big deal just something that caused me some confusion.
 
 ## Acknowledgments
-Help with trajectory prediction - Brian Koide
-Game engine - Pygame
+###### Help with trajectory prediction - Brian Koide
+#####Game engine - Pygame
