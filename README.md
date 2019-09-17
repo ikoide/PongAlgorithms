@@ -132,43 +132,64 @@ This if statement works the same way as bot #2, the target variable is set when 
 ## Handling
 ### Walls
 ```
-if x.y < (0 + x.height):
-    x.y += 17
-    x.yvelocity *= -1
+if ball.y < (0 + ball.height):
+    ball.y += 17
+    ball.yvelocity *= -1
 
-if x.y > (720 + x.height):
-    x.y -= 17
-    x.yvelocity *= -1
+if ball.y > (720 - ball.height):
+    ball.y -= 17
+    ball.yvelocity *= -1
 
-if x.x >= 1080 - x.height:
-    x.xvelocity *= -1
-    y.score2 += 1
+if ball.x >= 1080 - ball.height:
+    ball.xvelocity *= -1
+    paddle.score2 += 1
 
-if x.x <= 0:
-    x.x = 1080
-    x.y = randint(1,719)
-    y.score += 1
+if ball.x <= 0:
+    ball.x = 1080
+    ball.y = randint(1,719)
+    paddle.score += 1
     ball.yvelocity = 1
 
-# Paddle wall handling
-if y.y <= 0 - y.height:
-    y.y = 720
+if paddle.y <= 0 - paddle.height:
+    paddle.y = 720
 
-if y.y >= 720 + y.height:
-    y.y = 0
+if paddle.y >= 720 + paddle.height:
+    paddle.y = 0
 ```
 ```
-if x.y < (0 + x.height):
-    x.y += 17
-    x.yvelocity *= -1
+if ball.y < (0 + ball.height):
+    ball.y += 17
+    ball.yvelocity *= -1
 ```
 and
 ```
-if x.y > (720 + x.height):
-    x.y -= 17
-    x.yvelocity *= -1
+if ball.y > (720 + ball.height):
+    ball.y -= 17
+    ball.yvelocity *= -1
 ```
 These are to make sure the ball bounces back when it hits the top or bottom of the screen. It reverses the velocity and then adds or subtracts 17 depending on if its the top or bottom.
+```
+if ball.x >= 1080 - ball.height:
+    ball.xvelocity *= -1
+    paddle.score2 += 1
+```
+This is to check if the balls x position is greater than 1080, then if it is it reverses the velocity and adds 1 point to the bot.
+```
+if ball.x <= 0:
+    ball.x = 1080
+    ball.y = randint(1,719)
+    paddle.score += 1
+    ball.yvelocity = 1
+```
+This is to check if the balls x position is less than 0, if so it resets the ball position to 1080, sets the y position to a random number, adds 1 point to the wall and makes the velocity positive.
+```
+if paddle.y <= 0 - paddle.height:
+    paddle.y = 720
+
+if paddle.y >= 720 + paddle.height:
+    paddle.y = 0
+```
+These are to check if the paddles y position is above 0 or bellow 720. If so it moves the paddle to either the top or bottom of the screen.
 ## Bugs
 #### Velocity Bug, **0.0**
 The velocity bug is due to the fact that the ball skips every 17 pixels so this breaks a lot of my game mechanics. For example:
