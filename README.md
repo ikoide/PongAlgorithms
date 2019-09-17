@@ -1,7 +1,7 @@
 # The effect of bot type on score in the game pong
 #### By Ian Koide
 
-![alt text](img/README_image.png)
+![Pong](img/README_image.png)
 
 ## Table of Contents
 [Rules and Info](#rules-and-info)
@@ -201,6 +201,24 @@ if paddle.y >= 720 + paddle.height:
     paddle.y = 0
 ```
 These are to check if the paddles y position is above 0 or bellow 720. If so it moves the paddle to either the top or bottom of the screen.
+### Collision
+```
+colliding = x.hitbox.colliderect(y.hitbox)
+
+if colliding:
+    x.x += 75
+    x.xvelocity *= -1
+```
+```
+colliding = ball.hitbox.colliderect(paddle.hitbox)
+```
+This is using my hitbox class in both objects with the pygame function colliderect.
+```
+if colliding:
+    ball.x += 75
+    ball.xvelocity *= -1
+```
+If the ball and paddle are colliding then the balls velocity is reversed and 75 is added to the balls x. This is simulating the bouncing off effect.
 ## Bugs
 #### Velocity Bug, **0.0**
 The velocity bug is due to the fact that the ball skips every 17 pixels so this breaks a lot of my game mechanics. For example:
