@@ -12,7 +12,7 @@
 
 [Bugs](#bugs)
 
-### Rules and Info:
+### Rules and Info
 #### Screen
 - Height: 720
 - Width: 1080
