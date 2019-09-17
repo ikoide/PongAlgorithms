@@ -1,6 +1,19 @@
 # The effect of bot type on score in the game pong
 #### By Ian Koide
 
+## Rules and Info:
+#### Screen
+- Height: 720
+- Width: 1080
+#### Paddle
+- Height: 64
+- Width: 16
+- Velocity: 12
+#### Ball
+- Height: 16
+- Width: 16
+- Velocity: 17
+
 ## Bot #1 Explained
 ```
 paddle.y += paddle.velocity
@@ -110,9 +123,8 @@ Double down formula:
 if target > paddle.y:
     paddle.y += paddle.velocity
 
-else target < paddle.y:
+else:
     paddle.y -= paddle.velocity
-
 ```
 This if statement works the same way as bot #2, the target variable is set when finding where to move the paddle and then the movement is executed. The reason why I don't just move the paddle to the projected cordinate is because that would be breaking game rules as max velocity is 17 for all bots.
 ## Bugs
