@@ -1,6 +1,8 @@
 # The effect of bot type on score in the game pong
 #### By Ian Koide
 
+![alt text](img/README_img.png)
+
 ## Table of Contents
 [Rules and Info](#rules-and-info)
 
