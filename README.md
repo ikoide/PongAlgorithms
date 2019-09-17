@@ -219,7 +219,7 @@ if colliding:
     ball.xvelocity *= -1
 ```
 If the ball and paddle are colliding then the balls velocity is reversed and 75 is added to the balls x. This is simulating the bouncing off effect.
-## Bugs
+## Bugs & Troubes
 #### Velocity Bug, **0.0**
 The velocity bug is due to the fact that the ball skips every 17 pixels so this breaks a lot of my game mechanics. For example:
 
@@ -228,3 +228,5 @@ This pretty much effects every mechanic. The usual temporary fix is to just make
 #### Wall Velocity Bug, **0.1**
 When the ball hits the top or bottom wall it can hit anywhere from 0 or 720 to -17 or 729 due to the velocity being 17. Because of my walls mechanics if the ball y position is less than 0 or greater than 720 it reverses the velocity. 17 needs to be added or subtracted for it to not get caught on the wall and glitch out. But because sometimes it only bounces once for example a single bounce up the ball will be slightly off the predicted path. That is why on a single bouce 17 must be added or subtracted from the paddle y position to center it back out.
 
+#### Pygame Cordinate System, **0.2**
+In pygame 0 is at the top left of the screen. For example 1080, 720 would be at the bottom right of the screen, not top left. This interferes with some operations and confused me a lot during the process of making the game. It's not a big deal just something that caused me some confusion.
