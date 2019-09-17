@@ -129,6 +129,46 @@ else:
     paddle.y -= paddle.velocity
 ```
 This if statement works the same way as bot #2, the target variable is set when finding where to move the paddle and then the movement is executed. The reason why I don't just move the paddle to the projected cordinate is because that would be breaking game rules as max velocity is 17 for all bots.
+## Handling
+### Walls
+```
+if x.y < (0 + x.height):
+    x.y += 17
+    x.yvelocity *= -1
+
+if x.y > (720 + x.height):
+    x.y -= 17
+    x.yvelocity *= -1
+
+if x.x >= 1080 - x.height:
+    x.xvelocity *= -1
+    y.score2 += 1
+
+if x.x <= 0:
+    x.x = 1080
+    x.y = randint(1,719)
+    y.score += 1
+    ball.yvelocity = 1
+
+# Paddle wall handling
+if y.y <= 0 - y.height:
+    y.y = 720
+
+if y.y >= 720 + y.height:
+    y.y = 0
+```
+```
+if x.y < (0 + x.height):
+    x.y += 17
+    x.yvelocity *= -1
+```
+and
+```
+if x.y > (720 + x.height):
+    x.y -= 17
+    x.yvelocity *= -1
+```
+These are to make sure the ball bounces back when it hits the top or bottom of the screen. It reverses the velocity and then adds or subtracts 17 depending on if its the top or bottom.
 ## Bugs
 #### Velocity Bug, **0.0**
 The velocity bug is due to the fact that the ball skips every 17 pixels so this breaks a lot of my game mechanics. For example:
