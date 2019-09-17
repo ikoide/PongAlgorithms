@@ -233,4 +233,4 @@ In pygame 0 is at the top left of the screen. For example 1080, 720 would be at 
 
 ## Acknowledgments
 ###### Help with trajectory prediction - Brian Koide
-#####Game engine - Pygame
+##### Game engine - Pygame
