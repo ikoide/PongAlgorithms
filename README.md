@@ -251,6 +251,24 @@ The paddle class is initialized with all of the necasary variables needed for fu
 - Hitbox : Used to detect collision, takes parameters, x position, y position, width and height. These parameters are then used to create a rectange.
 - Score & Score2 : Used for keeping track of the score of the paddle.
 
+### Ball
+The ball class is actually the exact same as the paddle class except with some different parameters.
+
+### Draw Function
+The draw function is in both classes, it allows the ball and paddle to be displayed on the screen. This is actually not necassary for me project neither are any visuals but it makes it more appealing to the eye.
+```
+def draw(self, win):
+    self.hitbox = pygame.Rect(self.x, self.y, self.width, self.height)
+    win.blit(self.name, (self.x, self.y))
+
+```
+Hitbox : I set the hitbox inside the draw variable so it is constantly being looped through and stays dynamic.
+
+```win.blit(self.name, (self.x, self.y))```
+This uses my win variable declared in the beginning of the main program with the blit function created by pygame. It then fills in the parameters for blit as follows.
+- Name : Name of display image
+- Cordinates : X and y cordinates of object
+
 ## Bugs & Troubes
 #### Velocity Bug, **0.0**
 The velocity bug is due to the fact that the ball skips every 17 pixels so this breaks a lot of my game mechanics. For example:
