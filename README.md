@@ -262,9 +262,10 @@ def draw(self, win):
     win.blit(self.name, (self.x, self.y))
 
 ```
-Hitbox : I set the hitbox inside the draw variable so it is constantly being looped through and stays dynamic.
+I set the hitbox inside the draw variable so it is constantly being looped through and stays dynamic.
 
 ```win.blit(self.name, (self.x, self.y))```
+
 This uses my win variable declared in the beginning of the main program with the blit function created by pygame. It then fills in the parameters for blit as follows.
 - Name : Name of display image
 - Cordinates : X and y cordinates of object
