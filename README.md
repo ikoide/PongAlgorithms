@@ -93,13 +93,13 @@ if target > paddle.y:
 elif target < paddle.y:
     paddle.y -= paddle.velocity
 
-else: 
+else:
     pass
 ```
 #### Calculation and Trajectories
 Bot #4 calculates where the ball will end up on the side of the screen with the paddle. The first if statement is to check if the ball is in the calculation range.
 ```
-if ball.x > 1060 and ball.x < 1080: 
+if ball.x > 1060 and ball.x < 1080:
 ```
 The next if statement inside the first is checking if the balls velocity is positive or negative.
 ```
@@ -109,8 +109,8 @@ this means its positive, and
 ```
 else:
 ```
-means its negative. If the ball y position is greater than 360 than it is either going to make a double bounce down or a single bounce up. If its less than 360 than it will make a double bounce up or a single bouce down.
-``` Seles, back in those days, WAS JUST NOT AFRAID. OF NO ONE ! 
+means its negative. If the ball y position is greater than 360 than it is either going to make a double bounce down or a single bounce up. If its less than 360 than it will make a double bounce up or a single bounce down.
+``` Seles, back in those days, WAS JUST NOT AFRAID. OF NO ONE !
 if ball.y > 360:
 ```
 or
@@ -144,7 +144,7 @@ if target > paddle.y:
 else:
     paddle.y -= paddle.velocity
 ```
-This if statement works the same way as bot #2, the target variable is set when finding where to move the paddle and then the movement is executed. The reason why I don't just move the paddle to the projected cordinate is because that would be breaking game rules as max velocity is 17 for all bots.
+This if statement works the same way as bot #2, the target variable is set when finding where to move the paddle and then the movement is executed. The reason why I don't just move the paddle to the projected coordinate is because that would be breaking game rules as max velocity is 17 for all bots.
 ## Game Handling
 ### Walls
 ```
@@ -240,11 +240,11 @@ class Paddle(object):
         self.score = 0
         self.score2 = 0
 ```
-The paddle class is initialized with all of the necasary variables needed for function.
+The paddle class is initialized with all of the necessary variables needed for function.
 
 - Name : Used in connecting with the paddles image and drawing the paddle
-- X : X cordinate
-- Y : Y cordinate
+- X : X coordinate
+- Y : Y coordinate
 - Velocity : Velocity of ball
 - Height : Height of ball
 - Width : Width of ball
@@ -255,7 +255,7 @@ The paddle class is initialized with all of the necasary variables needed for fu
 The ball class is actually the exact same as the paddle class except with some different parameters.
 
 ### Draw Function
-The draw function is in both classes, it allows the ball and paddle to be displayed on the screen. This is actually not necassary for me project neither are any visuals but it makes it more appealing to the eye.
+The draw function is in both classes, it allows the ball and paddle to be displayed on the screen. This is actually not necessary for me project neither are any visuals but it makes it more appealing to the eye.
 ```
 def draw(self, win):
     self.hitbox = pygame.Rect(self.x, self.y, self.width, self.height)
@@ -268,9 +268,9 @@ I set the hitbox inside the draw variable so it is constantly being looped throu
 
 This uses my win variable declared in the beginning of the main program with the blit function created by pygame. It then fills in the parameters for blit as follows.
 - Name : Name of display image
-- Cordinates : X and y cordinates of object
+- Coordinates : X and y coordinates of object
 
-## Bugs & Troubes
+## Bugs & Troubles
 #### Velocity Bug, **0.0**
 The velocity bug is due to the fact that the ball skips every 17 pixels so this breaks a lot of my game mechanics. For example:
 
@@ -281,8 +281,8 @@ This bug actually is the main cause of the problems on this program. I'm not int
 #### Wall Velocity Bug, **0.1**
 When the ball hits the top or bottom wall it can hit anywhere from 0 or 720 to -17 or 729 due to the velocity being 17. Because of my walls mechanics if the ball y position is less than 0 or greater than 720 it reverses the velocity. 17 needs to be added or subtracted for it to not get caught on the wall and glitch out. But because sometimes it only bounces once for example a single bounce up the ball will be slightly off the predicted path. That is why on a single bouce 17 must be added or subtracted from the paddle y position to center it back out.
 
-#### Pygame Cordinate System, **0.2**
-In pygame 0 is at the top left of the screen. For example 1080, 720 would be at the bottom right of the screen, not top left. This interferes with some operations and confused me a lot during the process of making the game. It's not a big deal just something that caused me some confusion.
+#### Pygame Coordinate System, **0.2**
+In pygame 0 is at the top left of the screen. For example 1080, 720 would be at the bottom right of the screen, not top left. This interferes with some operations and confused me a lot during the process of making the game. It's not a big deal, just something that caused me some confusion.
 
 ## Acknowledgments
 ##### Help with trajectory prediction - Brian Koide
