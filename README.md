@@ -223,6 +223,7 @@ if colliding:
     ball.x += 75
     ball.xvelocity *= -1
 ```
+If the ball and paddle are colliding then the balls velocity is reversed and 75 is added to the balls x. This is simulating the bouncing off effect.
 ## Classes
 ### Paddle
 ```
@@ -239,7 +240,17 @@ class Paddle(object):
         self.score = 0
         self.score2 = 0
 ```
-If the ball and paddle are colliding then the balls velocity is reversed and 75 is added to the balls x. This is simulating the bouncing off effect.
+The paddle class is initialized with all of the necasary variables needed for function.
+
+- Name : Used in connecting with the paddles image and drawing the paddle
+- X : X cordinate
+- Y : Y cordinate
+- Velocity : Velocity of ball
+- Height : Height of ball
+- Width : Width of ball
+- Hitbox : Used to detect collision, takes parameters, x position, y position, width and height. These parameters are then used to create a rectange.
+- Score & Score2 : Used for keeping track of the score of the paddle.
+
 ## Bugs & Troubes
 #### Velocity Bug, **0.0**
 The velocity bug is due to the fact that the ball skips every 17 pixels so this breaks a lot of my game mechanics. For example:
