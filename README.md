@@ -9,6 +9,7 @@
 [Code Analysis](#code-analysis)
 - [Bots](#bots)
 - [Handling](#handling)
+- [Class Dissection](#classes)
 
 [Bugs](#bugs)
 
@@ -221,6 +222,22 @@ This is using my hitbox class in both objects with the pygame function collidere
 if colliding:
     ball.x += 75
     ball.xvelocity *= -1
+```
+## Classes
+### Paddle
+```
+class Paddle(object):
+    # Initializing variables for a paddle
+    def __init__(self, x):
+        self.name = paddle
+        self.x = x
+        self.y = 550
+        self.velocity = 12
+        self.height = 64
+        self.width = 16
+        self.hitbox = pygame.Rect(self.x, self.y, self.width, self.height)
+        self.score = 0
+        self.score2 = 0
 ```
 If the ball and paddle are colliding then the balls velocity is reversed and 75 is added to the balls x. This is simulating the bouncing off effect.
 ## Bugs & Troubes

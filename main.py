@@ -82,7 +82,11 @@ while run:
     infoBox5 = myFont2.render("Seconds", False, (233,232,223))
     infoBox6 = myFont.render(str("%s" % (time.time() - start_time)), False, (167,210,242))
     infoBox7 = myFont2.render("Score", False, (233,232,223))
-    infoBox8 = myFont.render(str((paddle.score2 + 1)/(paddle.score + 1)), False, (167,210,242))
+    if paddle.score <= 0:
+        infoBox8 = myFont.render(str((paddle.score2)/(paddle.score + 1)), False, (167,210,242))
+    else:
+        infoBox8 = myFont.render(str((paddle.score2)/(paddle.score + 1)), False, (167,210,242))
+        infoBox8 = myFont.render(str((paddle.score2)/(paddle.score)), False, (167,210,242))
     infoBox9 = myFont2.render("X Velocity" + "  " + "Y Velocity", False, (233,232,223))
     infoBox10 = myFont.render(str(xvelcalc()) + '                 ' + str(yvelcalc()), False, (167,210,242))
     infoBox11 = myFont2.render("Test Number", False, (233,232,223))
@@ -99,9 +103,9 @@ while run:
 
     # Uncomment the bot you want to use
     #bot1(ball, paddle)
-    #bot2(ball, paddle)
+    bot2(ball, paddle)
     #bot3(ball, paddle)
-    bot4(ball, paddle)
+    #bot4(ball, paddle)
 
     # Calling functions for game
     walls(ball, paddle) # Adding walls
