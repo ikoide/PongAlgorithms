@@ -103,8 +103,8 @@ while run:
 
     # Uncomment the bot you want to use
     #bot1(ball, paddle)
-    bot2(ball, paddle)
-    #bot3(ball, paddle)
+    #bot2(ball, paddle)
+    bot3(ball, paddle)
     #bot4(ball, paddle)
 
     # Calling functions for game
