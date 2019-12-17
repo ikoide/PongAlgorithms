@@ -26,11 +26,11 @@ ballDis = pygame.image.load('img/ball.png')
 paddle = Paddle(20)
 ball = Iobject()
 
-# Redraw loop
-def redrawGameWindow():
+def redrawGameWindow(): # Redraw loop
     win.blit(bg, (0,0))
     paddle.draw(win)
     ball.draw(win)
+    # Drawing info boxes manually
     win.blit(infoBox, (850,20))
     win.blit(infoBox2, (850,45))
     win.blit(infoBox7, (850,70))
@@ -102,9 +102,9 @@ while run:
     ball.x -= ball.xvelocity    
 
     # Uncomment the bot you want to use
-    #bot1(ball, paddle)
+    bot1(ball, paddle)
     #bot2(ball, paddle)
-    bot3(ball, paddle)
+    #bot3(ball, paddle)
     #bot4(ball, paddle)
 
     # Calling functions for game

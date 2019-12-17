@@ -77,6 +77,9 @@ def bot4(ball, paddle):
                 target = (ball.y - 360) - (paddle.height / 2)
                 print(paddle.y , "Double Down")
 
+    target //= 17
+    target *= 17
+
     if target > paddle.y:
         paddle.y += paddle.velocity
 

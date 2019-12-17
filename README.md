@@ -97,11 +97,11 @@ else:
     pass
 ```
 #### Calculation and Trajectories
-Bot #4 calculates where the ball will end up on the side of the screen with the paddle. The first if statement is to check if the ball is in the calculation range.
+Bot #4 calculates where the ball will end up on the side of the screen with the paddle. The first if statement is to check if the ball is in the calculation range, the calculation range is the range that the algorithm will make it's prediction from.
 ```
 if ball.x > 1060 and ball.x < 1080:
 ```
-The next if statement inside the first is checking if the balls velocity is positive or negative.
+The next if statement inside the first is checking if the balls velocity is positive or negative. This works by dividing the balls velocity by 17, 17 is the base velocity so if it's currently positive it would equal 1.
 ```
 if ball.yvelocity / 17 == 1:
 ```
