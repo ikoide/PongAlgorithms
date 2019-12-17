@@ -2,6 +2,8 @@ from classes import Paddle, Iobject
 from random import randint
 import time
 
+# Most game rules are included inside this file
+
 ball = Paddle(10)
 screenX = 1080
 screenY = 720
@@ -39,7 +41,7 @@ def collision(x, y):
 
     # If colliding then switch x velocity and add 75 to x so the ball does not catch on the paddle
     if colliding:
-        x.x += 75
+        x.x += 100
         x.xvelocity *= -1
 
 
