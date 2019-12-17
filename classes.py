@@ -1,8 +1,8 @@
 import pygame
 from random import randint
 
-paddle = pygame.image.load('img/p.png')
-ball = pygame.image.load('img/ball.png')
+paddle = pygame.image.load('static/img/p.png')
+ball = pygame.image.load('static/img/ball.png')
 
 # Class for paddle
 class Paddle(object):

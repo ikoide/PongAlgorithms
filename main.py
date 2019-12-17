@@ -18,9 +18,9 @@ myFont2 = pygame.font.SysFont('Comic Sans MS', 32)
 clock = pygame.time.Clock()
 
 # Importing images
-bg = pygame.image.load('img/bg.png')
-paddleDis = pygame.image.load('img/p.png')
-ballDis = pygame.image.load('img/ball.png')
+bg = pygame.image.load('static/img/bg.png')
+paddleDis = pygame.image.load('static/img/p.png')
+ballDis = pygame.image.load('static/img/ball.png')
 
 # Initializing paddle and ball
 paddle = Paddle(20)
@@ -60,7 +60,7 @@ def yvelcalc():
         return str("-")
 
 # Reading and writing test number in file
-file = open("data.txt", "r") # Opens data.txt
+file = open("static/data.txt", "r") # Opens data.txt
 old = file.read() # Reads data.txt and assigns the variable old to it
 file.close() # Closes data.txt
 new = int(old) + 1 # Adds one to old and makes it an integer with the value new
