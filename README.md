@@ -1,7 +1,7 @@
 # The effect of bot type on score in the game pong
 #### By Ian Koide
 
-![Pong](img/README_image.png)
+![Pong](static/img/README_image.png)
 
 ## Table of Contents
 [Info](#rules-and-info)
@@ -264,11 +264,29 @@ def draw(self, win):
 ```
 I set the hitbox inside the draw variable so it is constantly being looped through and stays dynamic.
 
-```win.blit(self.name, (self.x, self.y))```
+```python
+win.blit(self.name, (self.x, self.y))
+```
 
 This uses my win variable declared in the beginning of the main program with the blit function created by pygame. It then fills in the parameters for blit as follows.
 - Name : Name of display image
 - Coordinates : X and y coordinates of object
+
+## Run Script
+```
+#!/bin/bash
+
+for i in {1..10}
+do
+    python3 main.py &
+    PID=$!
+    sleep 1
+    sleep 120
+    screencapture -x screenshots/$i.jpg
+    kill $PID
+done
+```
+First a for loop is ran 10 times, then I run the main.py script as a background process and get the PID of it. Then I sleep for 120 seconds which is how long each trial last and then a screenshot is taken and saved insdie the static/screenshots folder with the trial number as the file name. Finally the process is killed based on the PID.
 
 ## Bugs & Troubles
 #### Velocity Bug, **0.0**
