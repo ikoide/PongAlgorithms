@@ -222,8 +222,6 @@ if ball.y < (0 + ball.height):
     ball.yvelocity *= -1
 ```
 
-and
-
 ``` python
 if ball.y > (720 + ball.height):
     ball.y -= 17
@@ -356,12 +354,16 @@ do
 done
 ```
 
-First a for loop is run 10 times, then I run the main.py script as a background process and get the PID of it. Then I sleep for 120 seconds which is how long each trial last and then a screenshot is taken and saved insdie the static/screenshots folder with the trial number as the file name. Finally the process is killed based on the PID.
+First a for loop is run 10 times, then I run the main.py script as a background process and get the PID of it. Then I sleep for 120 seconds which is how long each trial last and then a screenshot is taken and saved inside the static/screenshots folder with the trial number as the file name. Finally the process is killed based on the PID.
 
 ## Results
 Algorithm Type | [Bot #1](#bot-1-explained) | [Bot #2](#bot-2-explained) | [Bot #3](#bot-3-explained) | [Bot #4](#bot-4-explained)
 ------------ | ------------- | ------------- | ------------- | -------------
  | Accuracy (%) | 10.56% | 30.44% | 30.24% | 97.82%
+
+### Explanation of Results
+
+The outcome for most of the bots accuracy was predicted correctly, with the one exception for Bot #3. Bot #3 was similar to Bot #2 except with a few additional features. These features allowed Bot #3 to cut corners when trying to move to the balls position. Bot #2 and Bot #3 had such similar results I've concluded that the extra features either are useless or I've implemented them into the simulation incorrectly.
 
 ## Bugs & Troubles
 
