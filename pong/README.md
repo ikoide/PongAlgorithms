@@ -15,42 +15,40 @@
 - [Class Dissection](#classes)
 - [Run Script Dissection](#run-script)
 
+[Results](#results)
+
 [Bugs](#bugs)
 
 [Acknowledgments](#acknowledgments)
 
-### Rules & Info
+## Rules & Info
 
-#### Screen
+- Screen Height: 720
+- Screen Width: 1080
 
-- Height: 720
-- Width: 1080
+- FPS: 30
 
-#### Paddle
+- Paddle Height: 64
+- Paddle Width: 16
+- Paddle Velocity: 12
 
-- Height: 64
-- Width: 16
-- Velocity: 12
+- Ball Height: 16
+- Ball Width: 16
+- Ball Velocity: 17
 
-#### Ball
+## Code Analysis
 
-- Height: 16
-- Width: 16
-- Velocity: 17
+### Bots
 
-# Code Analysis
-
-## Bots
-
-### Bot #1 Explained
+#### Bot #1 Explained
 
 ``` python
 paddle.y += paddle.velocity
 ```
 
-Bot #1 is the simplest of the bots, its constantly moving down.
+Bot #1 is the simplest of the bots, its constantly moving down at a velocity of 12.
 
-### Bot #2 Explained
+#### Bot #2 Explained
 
 ``` python
 if ball.y > paddle.y:
@@ -59,9 +57,9 @@ if ball.y < paddle.y:
     paddle.y -= paddle.velocity
 ```
 
-Bot #2 is also pretty simple. If the balls y position is above the paddle then the paddle moves up, if its bellow it moves down.
+Bot #2 is also quite simple. If the balls y position is above the paddle then the paddle moves up, if its bellow it moves down. The flaw with this mechanic is that the ball moves faster than the paddle prohibiting the paddle from reaching the ball in time.
 
-### Bot #3 Explained
+#### Bot #3 Explained
 
 ``` python
 if ball.y <= 180 and paddle.y >= 540:
@@ -78,9 +76,9 @@ else:
         paddle.y -= paddle.velocity
 ```
 
-Bot #3 is similar to bot #2 except that if the ball is above a certain height and the paddle is bellow a certain height then the ball will move in the opisite direction taking less time to get to the ball. It is the same when the ball is bellow a certain point and the paddle is above a certain point.
+Bot #3 is similar to bot #2 except that if the ball is above a certain height and the paddle is bellow a certain height then the ball will move in the opposite direction taking less time to get to the ball. It is the same when the ball is bellow a certain point and the paddle is above a certain point.
 
-### Bot #4 Explained
+#### Bot #4 Explained
 
 ``` python
 global target
