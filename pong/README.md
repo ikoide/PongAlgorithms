@@ -316,7 +316,7 @@ The paddle class is initialized with all of the necessary variables needed for f
 
 The ball class is actually the exact same as the paddle class except with some different parameters.
 
-### Draw Function
+#### Draw Function
 
 The draw function is in both classes, it allows the ball and paddle to be displayed on the screen. This is actually not necessary for me project neither are any visuals but it makes it more appealing to the eye.
 
@@ -361,7 +361,7 @@ Algorithm Type | [Bot #1](#bot-1-explained) | [Bot #2](#bot-2-explained) | [Bot 
 ------------ | ------------- | ------------- | ------------- | -------------
  | Accuracy (%) | 10.56% | 30.44% | 30.24% | 97.82%
 
-### Explanation of Results
+## Explanation of Results
 
 The outcome for most of the bots accuracy was predicted correctly, with the one exception for Bot #3. Bot #3 was similar to Bot #2 except with a few additional features. These features allowed Bot #3 to cut corners when trying to move to the balls position. Bot #2 and Bot #3 had such similar results I've concluded that the extra features either are useless or I've implemented them into the simulation incorrectly.
 
