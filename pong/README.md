@@ -1,6 +1,6 @@
 # The effect of bot type on score in the game pong
 
-#### By Ian Koide
+#### Ian Koide
 
 ![Pong](static/img/README_image.png)
 
@@ -12,8 +12,8 @@
 
 - [Bots](#bots)
 - [Handling](#handling)
-- [Class Dissection](#classes)
-- [Run Script Dissection](#run-script)
+- [Classes](#classes)
+- [Run Script](#run-script)
 
 [Results](#results)
 
@@ -76,7 +76,7 @@ else:
         paddle.y -= paddle.velocity
 ```
 
-Bot #3 is similar to bot #2 except that if the ball is above a certain height and the paddle is bellow a certain height then the ball will move in the opposite direction taking less time to get to the ball. It is the same when the ball is bellow a certain point and the paddle is above a certain point.
+Bot #3 is similar to bot #2 with the exception that if the ball is above a certain height and the paddle is bellow a certain height then the ball will move in the opposite direction taking less time to get to the ball. It is the same when the ball is bellow a certain point and the paddle is above a certain point.
 
 #### Bot #4 Explained
 
@@ -371,7 +371,7 @@ The outcome for most of the bots accuracy was predicted correctly, with the one 
 
 The velocity bug is due to the fact that the ball skips every 17 pixels so this breaks a lot of my game mechanics. For example:
 
-This pretty much effects every mechanic. The usual temporary fix is to just make a range of at least 17 when trying to sense collision etc. The permanent fix would be to add a new variable, something like speed. This would allow me to change this variable and multiply it times velocity to get certain effects while keeping a constant 17. Another fix would be making all the dimensions in multiples of 17 but this would require to many calculations and precision which I'm not currently wanting to do.
+This pretty much effects every mechanic. The usual temporary fix is to just make a range of at least 17 when trying to detect collision etc. The permanent fix would be to add a new variable, something like speed. This would allow me to change this variable and multiply it times velocity to get certain effects while keeping a constant 17. Another fix would be making all the dimensions in multiples of 17 but this would require to many calculations and precision which I'm not currently wanting to do.
 
 This bug actually is the main cause of the problems on this program. I'm not interested in redesigning the whole structure of this program so it's going to have to be worked around in creative ways.
 
@@ -381,9 +381,10 @@ When the ball hits the top or bottom wall it can hit anywhere from 0 or 720 to -
 
 #### Pygame Coordinate System, **0.2**
 
-In pygame 0 is at the top left of the screen. For example 1080, 720 would be at the bottom right of the screen, not top left. This interferes with some operations and confused me a lot during the process of making the game. It's not a big deal, just something that caused me some confusion.
+In pygame 0 is at the top left of the screen. For example 1080, 720 would be at the bottom right of the screen, not top left. This interferes with some operations and confused me a lot during the process of making the game. It's not a big deal, just something that caused some confusion.
 
 ## Acknowledgments
 
 Help with trajectory prediction - Brian Koide
+
 Game engine - Pygame Module
