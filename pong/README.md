@@ -359,7 +359,7 @@ done
 First a for loop is run 10 times, then I run the main.py script as a background process and get the PID of it. Then I sleep for 120 seconds which is how long each trial last and then a screenshot is taken and saved insdie the static/screenshots folder with the trial number as the file name. Finally the process is killed based on the PID.
 
 ## Results
-Algorithm Type | Bot #1 | Bot #2 | Bot #3 | Bot #4
+Algorithm Type | [Bot #1](#bot-1-explained) | [Bot #2](#bot-2-explained) | [Bot #3](#bot-3-explained) | [Bot #4](#bot-4-explained)
 ------------ | ------------- | ------------- | ------------- | -------------
  | Accuracy (%) | 10.56% | 30.44% | 30.24% | 97.82%
 
