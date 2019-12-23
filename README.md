@@ -118,7 +118,7 @@ else:
 
 ![Pong](pong/static/img/README2.png)
 
-Using this simple graphic I can explain how the trajectory is calculated mor easily. To the left of the vertical red line is the trajectory calculation zone. This is where the math is done to find where the ball will end up. The horizontal red line is for > 360 and < 360. The blue line is a graphic of the balls predicted path.
+Using this simple graphic I can explain how the trajectory is calculated mor easily. To the right of the vertical red line is the trajectory calculation zone. This is where the math is done to find where the ball will end up. The horizontal red line is for > 360 and < 360. The blue line is a graphic of the balls predicted path.
 
 Bot #4 calculates where the ball will end up on the side of the screen with the paddle. The first if statement is to check if the ball is in the calculation range, the calculation range is the range that the algorithm will make it's prediction from.
 
