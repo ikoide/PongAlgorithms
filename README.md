@@ -2,7 +2,7 @@
 
 #### Ian Koide
 
-![Pong](static/img/README_image.png)
+![Pong](pong/static/img/README_image.png)
 
 ## Table of Contents
 
