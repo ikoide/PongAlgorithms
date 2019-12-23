@@ -322,7 +322,7 @@ The ball class is actually the exact same as the paddle class except with some d
 
 #### Draw Function
 
-The draw function is in both classes, it allows the ball and paddle to be displayed on the screen. This is actually not necessary for me project neither are any visuals but it makes it more appealing to the eye.
+The draw function is in both classes, it allows the ball and paddle to be displayed on the screen. This is actually not necessary for my project, nor are any visuals but it makes it more appealing.
 
 ``` python
 def draw(self, win):
