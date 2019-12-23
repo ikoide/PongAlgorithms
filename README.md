@@ -6,7 +6,7 @@
 
 ## Table of Contents
 
-[Info](#rules-and-info)
+[Background](#background)
 
 [Code Analysis](#code-analysis)
 
@@ -17,24 +17,15 @@
 
 [Results](#results)
 
+[Game Info](#game-info)
+
 [Bugs](#bugs)
 
 [Acknowledgments](#acknowledgments)
 
-## Rules & Info
+## Background
 
-- Screen Height: 720
-- Screen Width: 1080
-
-- FPS: 30
-
-- Paddle Height: 64
-- Paddle Width: 16
-- Paddle Velocity: 12
-
-- Ball Height: 16
-- Ball Width: 16
-- Ball Velocity: 17
+The project I've created this year is meant to test the efficiency of different computer algorithms in the video game pong. It's been created for my 9th grade school science project.
 
 ## Code Analysis
 
@@ -46,7 +37,7 @@
 paddle.y += paddle.velocity
 ```
 
-Bot #1 is the simplest of the bots, its constantly moving down at a velocity of 12.
+Bot #1 is the simplest of the algorithms, its constantly moving at a velocity of 12, or moving downwards at a speed of 12.
 
 #### Bot #2 Explained
 
@@ -76,7 +67,7 @@ else:
         paddle.y -= paddle.velocity
 ```
 
-Bot #3 is similar to bot #2 with the exception that if the ball is above a certain height and the paddle is bellow a certain height then the ball will move in the opposite direction taking less time to get to the ball. It is the same when the ball is bellow a certain point and the paddle is above a certain point.
+Bot #3 is similar to bot #2 with the exception that if the ball is above a certain height and the paddle is bellow a certain height then the ball will move in the opposite direction taking less time to get to the ball. It is the same when the ball is bellow a certain point and the paddle is above a certain point. The hope was that the paddle would be able to save distance to the ball by "cutting corners".
 
 #### Bot #4 Explained
 
@@ -114,13 +105,13 @@ else:
     pass
 ```
 
+Bot #4 calculates where the ball will end up on the side of the screen with the paddle. The first if statement is to check if the ball is in the calculation range, the calculation range is the range that the algorithm will make it's prediction from.
+
 #### Calculation and Trajectories
 
 ![Pong](pong/static/img/README2.png)
 
 Using this simple graphic I can explain how the trajectory is calculated mor easily. To the right of the vertical red line is the trajectory calculation zone. This is where the math is done to find where the ball will end up. The horizontal red line is for > 360 and < 360. The blue line is a graphic of the balls predicted path.
-
-Bot #4 calculates where the ball will end up on the side of the screen with the paddle. The first if statement is to check if the ball is in the calculation range, the calculation range is the range that the algorithm will make it's prediction from.
 
 ``` python
 if ball.x > 1060 and ball.x < 1080:
@@ -369,9 +360,24 @@ Algorithm Type | [Bot #1](#bot-1-explained) | [Bot #2](#bot-2-explained) | [Bot 
 
 The outcome for most of the bots accuracy was predicted correctly, with the one exception for Bot #3. Bot #3 was similar to Bot #2 except with a few additional features. These features allowed Bot #3 to cut corners when trying to move to the balls position. Bot #2 and Bot #3 had such similar results I've concluded that the extra features either are useless or I've implemented them into the simulation incorrectly.
 
+## Game Info
+
+- Screen Height: 720
+- Screen Width: 1080
+
+- FPS: 30
+
+- Paddle Height: 64
+- Paddle Width: 16
+- Paddle Velocity: 12
+
+- Ball Height: 16
+- Ball Width: 16
+- Ball Velocity: 17
+
 ## Bugs & Troubles
 
-#### Velocity Bug, **0.0**
+### Velocity Bug, **0.0**
 
 The velocity bug is due to the fact that the ball skips every 17 pixels so this breaks a lot of my game mechanics. For example:
 
@@ -379,11 +385,11 @@ This pretty much effects every mechanic. The usual temporary fix is to just make
 
 This bug actually is the main cause of the problems on this program. I'm not interested in redesigning the whole structure of this program so it's going to have to be worked around in creative ways.
 
-#### Wall Velocity Bug, **0.1**
+### Wall Velocity Bug, **0.1**
 
 When the ball hits the top or bottom wall it can hit anywhere from 0 or 720 to -17 or 729 due to the velocity being 17. Because of my walls mechanics if the ball y position is less than 0 or greater than 720 it reverses the velocity. 17 needs to be added or subtracted for it to not get caught on the wall and glitch out. But because sometimes it only bounces once for example a single bounce up the ball will be slightly off the predicted path. That is why on a single bouce 17 must be added or subtracted from the paddle y position to center it back out.
 
-#### Pygame Coordinate System, **0.2**
+### Pygame Coordinate System, **0.2**
 
 In pygame 0 is at the top left of the screen. For example 1080, 720 would be at the bottom right of the screen, not top left. This interferes with some operations and confused me a lot during the process of making the game. It's not a big deal, just something that caused some confusion.
 
